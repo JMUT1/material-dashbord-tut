@@ -1,8 +1,7 @@
 import React from 'react'
 import {ColorModeContext, useMode} from "./theme"
 import { CssBaseline, ThemeProvider } from '@mui/material'
-import { Theme } from '@fullcalendar/core/internal'
-
+import TopBar from "./scenes/Global/TopBar"
 
 const App = () => {
   const [theme, colorMode]= useMode()
@@ -11,7 +10,9 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline/>
     <div className='app'>
-      <main className='content'>dfsb</main>
+      <main className='content'>
+        <TopBar/>
+      </main>
     </div>
     </ThemeProvider>
     </ColorModeContext.Provider>
